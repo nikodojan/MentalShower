@@ -1,4 +1,5 @@
-# MentalShower API
+# MentalShower API  
+.NET Version: .NET5
 
 ## API  
 **GET: /measurements**  
