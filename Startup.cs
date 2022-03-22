@@ -12,7 +12,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using MentalShower.Data;
+using MentalShower.MongoDb;
 using Microsoft.EntityFrameworkCore;
+using MongoDB.Driver;
 
 namespace MentalShower
 {
@@ -35,6 +37,10 @@ namespace MentalShower
 
             //services.AddDbContext<ApiContext>(builder => 
             //    builder.UseSqlServer(Configuration.GetConnectionString("SqlServerConnection")));
+
+            var settings = MongoClientSettings.FromConnectionString(Secrets.ConnectionString);
+
+            services.AddTransient<MeasurementsDatabaseSettings>();
 
             services.AddSwaggerGen(c =>
             {
