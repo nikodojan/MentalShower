@@ -32,6 +32,7 @@ namespace MentalShower.Controllers
         {
             if (!ModelState.IsValid) return BadRequest();
             Measurement mm = new Measurement(dto);
+            mm.Id = null;
             await _service.CreateAsync(mm);
             return NoContent();
         }

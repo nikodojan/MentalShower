@@ -38,9 +38,7 @@ namespace MentalShower
             //services.AddDbContext<ApiContext>(builder => 
             //    builder.UseSqlServer(Configuration.GetConnectionString("SqlServerConnection")));
 
-            var settings = MongoClientSettings.FromConnectionString(Secrets.ConnectionString);
-
-            services.AddTransient<MeasurementsDatabaseSettings>();
+            services.AddTransient<MeasurementsService>();
 
             services.AddSwaggerGen(c =>
             {
