@@ -28,11 +28,13 @@ namespace MentalShower
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
             services.AddControllers();
 
             services.AddDbContext<ApiContext>(builder => 
                 builder.UseSqlite("Data Source=measurementDb.db"));
+
+            //services.AddDbContext<ApiContext>(builder => 
+            //    builder.UseSqlServer(Configuration.GetConnectionString("SqlServerConnection")));
 
             services.AddSwaggerGen(c =>
             {

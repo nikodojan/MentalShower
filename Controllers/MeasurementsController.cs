@@ -2,6 +2,7 @@
 using System.Threading.Tasks;
 using MentalShower.Data;
 using MentalShower.Models;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -17,6 +18,7 @@ namespace MentalShower.Controllers
             _context = ctx;
         }
         // GET: /measurements
+        [ProducesResponseType(StatusCodes.Status200OK)]
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Measurement>>> Get()
         {
@@ -26,6 +28,8 @@ namespace MentalShower.Controllers
 
 
         // POST: /measurements
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [HttpPost]
         public async Task<ActionResult> Post([FromBody] MeasurementDto dto)
         {
