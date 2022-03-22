@@ -6,11 +6,11 @@ using MongoDB.Driver;
 
 namespace MentalShower.MongoDb
 {
-    public class MeasurementsService
+    public class MdbMeasurementsService
     {
         private readonly IMongoCollection<Measurement> _measurements;
 
-        public MeasurementsService()
+        public MdbMeasurementsService()
         {
             var settings = MongoClientSettings.FromConnectionString(Secrets.ConnectionString);
             settings.ServerApi = new ServerApi(ServerApiVersion.V1);

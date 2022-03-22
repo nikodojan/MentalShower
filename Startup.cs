@@ -38,7 +38,7 @@ namespace MentalShower
             //services.AddDbContext<ApiContext>(builder => 
             //    builder.UseSqlServer(Configuration.GetConnectionString("SqlServerConnection")));
 
-            services.AddTransient<MeasurementsService>();
+            services.AddTransient<MdbMeasurementsService>();
 
             services.AddSwaggerGen(c =>
             {

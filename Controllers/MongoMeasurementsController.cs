@@ -12,8 +12,8 @@ namespace MentalShower.Controllers
     [ApiController]
     public class MongoMeasurementsController : ControllerBase
     {
-        private readonly MeasurementsService _service;
-        public MongoMeasurementsController(MeasurementsService svc)
+        private readonly MdbMeasurementsService _service;
+        public MongoMeasurementsController(MdbMeasurementsService svc)
         {
             _service = svc;
         }
