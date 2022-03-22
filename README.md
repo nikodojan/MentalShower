@@ -22,11 +22,13 @@ POST:
 }
 `
 
-Constraints:
-zone: a number between 1 and 16
-Temperature: a number between 1 and 6
-Air Quality: a number between 1 and 6
-Humidity: a number between 1 and 6
+Input constraints:  
+|Key| Value |
+|--------|---------|
+|zone|a number between 1 and 16|  
+|Temperature| a number between 1 and 6 | 
+|Air Quality| a number between 1 and 6  |
+|Humidity| a number between 1 and 6  |
 
 ## Database
 
