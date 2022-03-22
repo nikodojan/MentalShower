@@ -43,5 +43,5 @@ If type and range are not upheld, the API will return a BadResult (400).
 
 ## Database
 
-As of now an in-app SQLite database.
-MongoDb possible. Provide a connection string, set the right database and colleciton names. 
+As of now an in-app SQLite database.  
+MongoDb possible. Provide a connection string, set the right database and colleciton names in the service class.
