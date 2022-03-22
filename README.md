@@ -2,6 +2,8 @@
 
 ## API  
 **GET: /measurements**  
+On success returns OK (200)  
+Returned object: Array of measurements  
 `[
   {
     "zone": 0,
@@ -11,10 +13,12 @@
     "Timestamp": "2022-03-22T15:19:47.105Z"
   }
 ]`  
-On success returns OK (200)
+
 
 
 **POST: /measurements**  
+On success returns NoContent (204)  
+Input object as request body:  
 `
 {
   "zone": 0,
@@ -23,7 +27,7 @@ On success returns OK (200)
   "Humidity": 0
 }
 `  
-On success returns NoContent (204)
+
 
 **Input constraints:**  
 If type and range are not upheld, the API will return a BadResult (400).
